@@ -33,11 +33,11 @@ const renderCalendar = () => {
   for (let i = firstDayofMonth; i > 0; i--) {
     liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
   }
+  
 
   for (let i = 1; i <= lastDateofMonth; i++) {
     let isToday =
-      i === date.getDate() &&
-      currMonth === new Date().getMonth() &&
+      i === date.getDate() && 
       currYear === new Date().getFullYear()
         ? "active"
         : "";
